@@ -61,7 +61,7 @@ class Context {
         void MoveObject(Snake * s, Fruit * f) {
             if (s->x < f->x) {
                 s->x = s->x + 1;
-            } else if (s->x > f->x) {
+            } else if (s->x > f->x) {g
                 s->x = s->x - 1;
             }
             
