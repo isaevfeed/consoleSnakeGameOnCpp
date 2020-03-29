@@ -9,12 +9,13 @@ class Game {
 
     public:
         static void Start() {
-            Context c = Context(20, 20);
-            Snake s = Snake(c.width, c.height);
-            Fruit f = Fruit(c.width, c.height);
+            Context c = Context(40, 20);
+            Snake * s = new Snake(c.width, c.height);
+            Fruit * f = new Fruit(c.width, c.height);
 
             while (!gameOver) {
                 c.Draw(s, f);
+                c.MoveObject(s, f);
             }
         }
 };
